@@ -1,0 +1,30 @@
+{
+    "version": "10.2",
+    "description": "Reverse proxy tool to access Steam Community in mainland China",
+    "homepage": "https://www.dogfight360.com/blog/686/",
+    "license": "Proprietary",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2019/09/steamcommunity_302_V10.2_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#/dl",
+    "hash": "4bec9b61ad1a73256e451606b9b9528d72c67dcfdf7e5c17adcafb7deb39f5e4",
+    "installer": {
+        "script": [
+            "7z x \"$dir/dl\" -o\"$dir\" -pdogfight360",
+            "Get-ChildItem \"$dir\\steamcommunity_302_V*\" | ?{$_.psiscontainer -eq $true} | Get-ChildItem | Move-Item -Destination \"$dir\"",
+            "Get-ChildItem \"$dir\\steamcommunity_302_V*.exe\" | Rename-Item -NewName \"steamcommunity_302.exe\"",
+            "Get-ChildItem \"$dir\\steamcommunity_302_V*\" | ?{$_.psiscontainer -eq $true} | Remove-Item",
+            "Remove-Item \"$dir/dl\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "steamcommunity_302.exe",
+            "SteamCommunity 302"
+        ]
+    ],
+    "depends": "7zip",
+    "checkver": {
+        "regex": "steamcommunity 302 Ver.([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/2019/09/steamcommunity_302_V$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip/download"
+    }
+}
