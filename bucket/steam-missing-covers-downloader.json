@@ -1,0 +1,21 @@
+{
+    "version": "1.5.0",
+    "description": "Adds missing library covers for new steam UI",
+    "homepage": "https://github.com/wynick27/steam-missing-covers-downloader",
+    "license": "Freeware",
+    "url": "https://github.com/wynick27/steam-missing-covers-downloader/archive/1.5.0.zip",
+    "hash": "42b98059f288c368888d7f26ced1c424b1a90d2c76f67a35ffcad1b1400657b0",
+    "extract_dir": "steam-missing-covers-downloader-1.5.0",
+    "installer": {
+        "script": "pip install -U aiohttp bs4 steam"
+    },
+    "bin": "missing_cover_downloader.py",
+    "suggest": {
+        "python": "main/python"
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/wynick27/steam-missing-covers-downloader/archive/$version.zip",
+        "extract_dir": "steam-missing-covers-downloader-$version"
+    }
+}
