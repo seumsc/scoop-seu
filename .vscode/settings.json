@@ -1,23 +1,17 @@
 // Configure PSScriptAnalyzer settings
 {
-    "[powershell]": {
-        // Disable formating until: https://github.com/PowerShell/vscode-powershell/issues/1019 is fixed
-        "editor.formatOnSave": false
-    },
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/CVS": true,
         "**/.DS_Store": true,
+        "**/CVS": true,
         "**/tmp": true
     },
     "json.schemas": [
         {
             "url": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-            "fileMatch": [
-                "bucket/*.json"
-            ]
+            "fileMatch": ["bucket/*.json"]
         }
     ],
     "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
