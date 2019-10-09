@@ -21,9 +21,6 @@
             "ArchiSteamFarm"
         ]
     ],
-    "suggest": {
-        "dotnet-runtime": "main/dotnet-sdk"
-    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
