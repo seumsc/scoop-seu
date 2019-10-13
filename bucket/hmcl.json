@@ -1,0 +1,47 @@
+{
+    "version": "3.2.130",
+    "description": "A multi-functional, cross-platform Minecraft Launcher",
+    "homepage": "https://hmcl.huangyuhui.net/",
+    "license": "GPL-3.0-only",
+    "url": "http://ci.huangyuhui.net/job/HMCL/130/artifact/HMCL/build/libs/HMCL-3.2.130.jar#/HMCL.jar",
+    "hash": "sha1:ae27cc9ff24ee5231eb9722c2e8b1e181f379507",
+    "bin": "hmcl.bat",
+    "shortcuts": [
+        [
+            "hmcl.bat",
+            "HMCL"
+        ]
+    ],
+    "persist": [
+        "hmcl.json",
+        ".minecraft"
+    ],
+    "pre_install": [
+        "function ensureFile([String] $name) {",
+        "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
+        "        Add-Content -Path \"$dir\\$name\" -Value $null",
+        "    }",
+        "}",
+        "ensureFile 'hmcl.json'",
+        "Set-Content -Path \"$dir\\hmcl.bat\" -Value \"pushd $dir && javaw -jar HMCL.jar && popd\""
+    ],
+    "suggest": {
+        "JRE/JDK with JFX": [
+            "java/zulufx11-jre",
+            "java/liberica11",
+            "java/zulufx8-jre",
+            "java/liberica8-jre"
+        ]
+    },
+    "checkver": {
+        "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true#/HMCL.jar",
+        "jsonpath": "version"
+    },
+    "autoupdate": {
+        "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.jar",
+        "hash": {
+            "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
+            "jsonpath": "jarsha1"
+        }
+    }
+}
