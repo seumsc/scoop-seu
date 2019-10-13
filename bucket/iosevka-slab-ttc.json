@@ -1,0 +1,29 @@
+{
+    "version": "2.3.2",
+    "description": "Slender typeface for code, from code.",
+    "homepage": "https://github.com/be5invis/Iosevka",
+    "license": "OFL-1.1",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v2.3.2/ttc-iosevka-slab-2.3.2.zip",
+    "hash": "f0fbec19706f38b9f9b751bb3217883340e64b0f1d004fa84d53c4d65d42e11d",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/ttc-iosevka-slab-$version.zip"
+    },
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter 'iosevka-slab*.ttc' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter 'iosevka-slab*.ttc' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'Iosevka Slab' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
