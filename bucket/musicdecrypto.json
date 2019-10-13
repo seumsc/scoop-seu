@@ -6,6 +6,9 @@
     "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v1.0.0/MusicDecrypto-netcore3.0-generic-1.0.0.7z",
     "hash": "082a87ff437c759a5d54a7a677b22d66337548ee665553e8b4a8f44098521bac",
     "bin": "MusicDecrypto.exe",
+    "suggest": {
+        ".NET Core Runtime/SDK": "main/dotnet"
+    },
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v$version/MusicDecrypto-netcore3.0-generic-$version.7z"
