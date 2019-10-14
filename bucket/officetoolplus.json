@@ -1,10 +1,10 @@
 {
-    "version": "7.0.0.0",
+    "version": "7.0.0",
     "description": "Manage your Microsoft Office install",
     "homepage": "https://otp.landian.vip/",
     "license": "Proprietary",
-    "url": "https://delivery.yuntu.moe/office-tool/Office%20Tool%20v7.0.0.0.zip",
-    "hash": "bc20731cb4705ce2089de3b33372c4dafb7f7ef9dcaf7ca98e1cee25037e14f3",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/7.0.0/OTP.zip",
+    "hash": "e718d8aaf4be81dcd0c7ce5cfa723073322cdb3f0da89a5d98cdc4426fbda562",
     "extract_dir": "Office Tool",
     "shortcuts": [
         [
@@ -17,10 +17,9 @@
         "Office"
     ],
     "checkver": {
-        "url": "https://delivery.yuntu.moe/office-tool/otp.php",
-        "regex": "Office Tool v([\\d.]+).zip"
+        "github": "https://github.com/YerongAI/Office-Tool"
     },
     "autoupdate": {
-        "url": "https://delivery.yuntu.moe/office-tool/Office%20Tool%20v$version.zip"
+        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/OTP.zip"
     }
 }
