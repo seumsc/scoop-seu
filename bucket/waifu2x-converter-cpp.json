@@ -1,0 +1,25 @@
+{
+    "version": "5.3.1",
+    "homepage": "https://github.com/DeadSix27/waifu2x-converter-cpp",
+    "description": "AI-powered image upscaler powered by OpenCL and OpenCV.",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/DeadSix27/waifu2x-converter-cpp/releases/download/v5.3.1/waifu2x-DeadSix27-win64_v531.zip",
+            "hash": "677c5ac499d12db4ded100eb4a0e5ad5f1c8e5f2c4571564f4c8a92e9c08f739"
+        }
+    },
+    "bin": "waifu2x-converter-cpp.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/DeadSix27/waifu2x-converter-cpp/releases/download/v$version/waifu2x-DeadSix27-win64_v$cleanVersion.zip",
+                "hash": {
+                    "url": "https://github.com/DeadSix27/waifu2x-converter-cpp/releases/latest",
+                    "find": "SHA256: ([a-fA-F0-9]{64})"
+                }
+            }
+        }
+    }
+}
