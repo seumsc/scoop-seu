@@ -1,0 +1,76 @@
+{
+    "version": "2.10.0",
+    "description": "Upscaling video with waifu2x and Anime4K.",
+    "homepage": "https://k4yt3x.com/video2x/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/k4yt3x/video2x/releases/download/2.10.0/video2x-2.10.0-win32-light.zip",
+    "hash": "13e97abd2247605e6183f5065d774c150b24d8233fb4eb3281658c72246ca41c",
+    "extract_dir": "video2x-2.10.0-win32-light",
+    "bin": "video2x.exe",
+    "shortcuts": [
+        [
+            "video2x_gui.exe",
+            "video2x"
+        ]
+    ],
+    "persist": "video2x.json",
+    "post_install": [
+        "$config = (Get-Content ($persist_dir + \"\\video2x.json\") -Encoding UTF8) | ConvertFrom-Json",
+        "$shims_path = $env:SCOOP + \"\\shims\"",
+        "$shims_global_path = $env:SCOOP_GLOBAL + \"\\shims\"",
+        "if (Test-Path $shims_path\\waifu2x-caffe-cui.exe) {",
+        "    $config.waifu2x_caffe.waifu2x_caffe_path = $shims_path + \"\\waifu2x-caffe-cui.exe\"",
+        "} elseif (Test-Path $shims_global_path\\waifu2x-caffe-cui.exe) {",
+        "    $config.waifu2x_caffe.waifu2x_caffe_path = $shims_global_path + \"waifu2x-caffe-cui.exe\"",
+        "} else {",
+        "    $config.waifu2x_caffe.waifu2x_caffe_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-caffe\\waifu2x-caffe-cui.exe\"",
+        "}",
+        "if (Test-Path $shims_path\\waifu2x-converter-cpp.exe) {",
+        "    $config.waifu2x_converter.waifu2x_converter_path = $shims_path + \"\\waifu2x-converter-cpp.exe\"",
+        "} elseif (Test-Path $shims_global_path\\waifu2x-converter-cpp.exe) {",
+        "    $config.waifu2x_converter.waifu2x_converter_path = $shims_global_path + \"\\waifu2x-converter-cpp.exe\"",
+        "} else {",
+        "    $config.waifu2x_converter.waifu2x_converter_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-converter-cpp.exe\"",
+        "}",
+        "if (Test-Path $shims_path\\waifu2x-ncnn-vulkan.exe) {",
+        "    $config.waifu2x_ncnn_vulkan.waifu2x_ncnn_vulkan_path = $shims_path + \"\\waifu2x-ncnn-vulkan.exe\"",
+        "} elseif (Test-Path $shims_global_path\\waifu2x-ncnn-vulkan.exe) {",
+        "    $config.waifu2x_ncnn_vulkan.waifu2x_ncnn_vulkan_path = $shims_global_path + \"\\waifu2x-ncnn-vulkan.exe\"",
+        "} else {",
+        "    $config.waifu2x_ncnn_vulkan.waifu2x_ncnn_vulkan_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-ncnn-vulkan\\waifu2x-ncnn-vulkan.exe\"",
+        "}",
+        "if (Test-Path $shims_path\\ffmpeg.exe) {",
+        "    $config.ffmpeg.ffmpeg_path = $shims_path",
+        "} elseif (Test-Path $shims_global_path\\ffmpeg.exe) {",
+        "    $config.ffmpeg.ffmpeg_path = $shims_global_path",
+        "} else {",
+        "    $config.ffmpeg.ffmpeg_path = $env:LOCALAPPDATA + \"\\video2x\\ffmpeg-latest-win64-static\\bin\"",
+        "}",
+        "ConvertTo-Json $config | Set-Content ($persist_dir + \"\\video2x.json\") -Encoding UTF8",
+        "if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = resolve-path (split-path (split-path (scoop which scoop))) }",
+        "$formatjson = \"$env:SCOOP_HOME/bin/formatjson.ps1\"",
+        "Invoke-Expression -command \"& '$formatjson' -Dir '$persist_dir'\""
+    ],
+    "notes": [
+        "Since Anime4K has no official pre-built release for now,",
+        "run \"video2x_setup -d anime4k\" if you prefer to use it.",
+        "For waifu2x-caffe/waifu2x-converter-cpp/waifu2x-ncnn-vulkan,",
+        "run \"scoop install <name>\" to install the particular implement,",
+        "then run \"scoop update -f video2x\" to re-configure video2x paths."
+    ],
+    "depends": "main/ffmpeg",
+    "suggest": {
+        "Waifu2x implement (x64 only)": [
+            "extras/waifu2x-caffe",
+            "seu/waifu2x-converter-cpp",
+            "seu/waifu2x-ncnn-vulkan"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/k4yt3x/video2x"
+    },
+    "autoupdate": {
+        "url": "https://github.com/k4yt3x/video2x/releases/download/$version/video2x-$version-win32-light.zip",
+        "extract_dir": "video2x-$version-win32-light"
+    }
+}
