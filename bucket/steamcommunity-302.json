@@ -20,7 +20,7 @@
             "SteamCommunity 302"
         ]
     ],
-    "depends": "7zip",
+    "depends": "main/7zip",
     "checkver": {
         "regex": "uploads/(?<date>[\\d/]+)/steamcommunity_302_V(?<version>[\\d.]+)_"
     },
