@@ -3,12 +3,20 @@
     "description": "A multi-functional, cross-platform Minecraft Launcher",
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
-    "url": "http://ci.huangyuhui.net/job/HMCL/137/artifact/HMCL/build/libs/HMCL-3.2.137.jar#/HMCL.jar",
-    "hash": "sha1:eed9e6087d489e78f959a60dee20e7e6d8b6e826",
-    "bin": "hmcl.bat",
+    "url": "http://ci.huangyuhui.net/job/HMCL/137/artifact/HMCL/build/libs/HMCL-3.2.137.exe#/HMCL.exe",
+    "hash": "sha1:bf7c15b88cef98cb466ce867d3ff38ff19114802",
+    "pre_install": [
+        "function ensureFile([String] $name) {",
+        "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
+        "        Add-Content -Path \"$dir\\$name\" -Value $null",
+        "    }",
+        "}",
+        "ensureFile 'hmcl.json'"
+    ],
+    "bin": "HMCL.exe",
     "shortcuts": [
         [
-            "hmcl.bat",
+            "HMCL.exe",
             "HMCL"
         ]
     ],
@@ -16,21 +24,12 @@
         "hmcl.json",
         ".minecraft"
     ],
-    "pre_install": [
-        "function ensureFile([String] $name) {",
-        "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
-        "        Add-Content -Path \"$dir\\$name\" -Value $null",
-        "    }",
-        "}",
-        "ensureFile 'hmcl.json'",
-        "Set-Content -Path \"$dir\\hmcl.bat\" -Value \"pushd $dir && javaw -jar HMCL.jar && popd\""
-    ],
     "suggest": {
-        "JRE/JDK with JFX": [
-            "java/zulufx11-jre",
-            "java/liberica11",
+        "JRE with JFX": [
+            "java/corretto8-jre",
+            "java/liberica8-jre",
             "java/zulufx8-jre",
-            "java/liberica8-jre"
+            "java/zulufx11-jre"
         ]
     },
     "checkver": {
@@ -38,10 +37,10 @@
         "jsonpath": "version"
     },
     "autoupdate": {
-        "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.jar#/HMCL.jar",
+        "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/HMCL.exe",
         "hash": {
             "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
-            "jsonpath": "jarsha1"
+            "jsonpath": "exesha1"
         }
     }
 }
