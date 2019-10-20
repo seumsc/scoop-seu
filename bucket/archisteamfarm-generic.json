@@ -18,7 +18,9 @@
     "shortcuts": [
         [
             "ArchiSteamFarm.cmd",
-            "ArchiSteamFarm"
+            "ArchiSteamFarm",
+            "",
+            "ArchiSteamFarm.ico"
         ]
     ],
     "checkver": "github",
