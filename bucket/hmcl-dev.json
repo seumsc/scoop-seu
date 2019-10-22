@@ -34,13 +34,13 @@
     },
     "checkver": {
         "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
-        "jsonpath": "version"
+        "jsonpath": "$.version"
     },
     "autoupdate": {
         "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/HMCL.exe",
         "hash": {
             "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
-            "jsonpath": "exesha1"
+            "jsonpath": "$.exesha1"
         }
     }
 }
