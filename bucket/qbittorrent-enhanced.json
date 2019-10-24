@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
     "license": "GPL-2.0-only",
-    "version": "4.1.8.3",
+    "version": "4.1.8.4",
     "description": "qBittorrent with Xunlei-like client blocked.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.8.3/qbittorrent_4.1.8.3_x64_setup.exe#/dl.7z",
-            "hash": "f38a1d132577b55b2e4cf90bc18f8ece9bb20f4574a4563bb35e30cfd048db2c"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.8.4/qbittorrent_4.1.8.4_x64_setup.exe#/dl.7z",
+            "hash": "ed70428fc28793d9c0e311db85704a63e238fa1fd97f488ead083b02c36e0037"
         },
         "32bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.8.3/qbittorrent_4.1.8.3_setup.exe#/dl.7z",
-            "hash": "d95fdb9412ebaa146136112ca55288462bbd8778d70f2bb6588c7b4df5fd4924"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.8.4/qbittorrent_4.1.8.4_setup.exe#/dl.7z",
+            "hash": "2df631874e52e10135db02b0d9a16e497a8a1fc38471b732ce7ca441ef2813fb"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
