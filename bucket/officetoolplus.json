@@ -1,10 +1,10 @@
 {
-    "version": "7.2.0.0",
+    "version": "7.2.2.3",
     "description": "Manage your Microsoft Office install",
     "homepage": "https://otp.landian.vip/",
     "license": "Proprietary",
-    "url": "https://github.com/YerongAI/Office-Tool/releases/download/7.2.0.0/Office.Tool.v7.2.zip",
-    "hash": "3d5c02069f7736aadc6cdd9bd3e6715f2ec1fd7cd360e4ae1c2f83fb91e62d4d",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/7.2.2.3/Office.Tool.v7.2.2.3.zip",
+    "hash": "6377bf836774cbb47ab1fe86454002b2e27bf02d20de97aef34a184402348f86",
     "extract_dir": "Office Tool",
     "shortcuts": [
         [
@@ -20,6 +20,6 @@
         "github": "https://github.com/YerongAI/Office-Tool"
     },
     "autoupdate": {
-        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office.Tool.v$majorVersion.$minorVersion.zip"
+        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office.Tool.v$version.zip"
     }
 }
