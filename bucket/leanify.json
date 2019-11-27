@@ -1,6 +1,6 @@
 {
     "version": "0.4.3",
-    "description": "Lightweight lossless file minifier/optimizer",
+    "description": "Lightweight lossless file minifier/optimizer.",
     "homepage": "https://github.com/JayXon/Leanify",
     "license": "MIT",
     "architecture": {

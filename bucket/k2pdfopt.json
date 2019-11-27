@@ -1,6 +1,6 @@
 {
     "version": "2.51a",
-    "description": "Optimize PDF/DJVU files for mobile e-readers and smartphones",
+    "description": "Optimize PDF/DJVU files for mobile e-readers and smartphones.",
     "homepage": "https://www.willus.com/k2pdfopt/",
     "license": "AGPL-3.0-or-later",
     "architecture": {
