@@ -1,10 +1,10 @@
 {
-    "version": "3.47",
+    "version": "3.50",
     "description": "Edit hosts to reach international game servers in mainland China.",
     "homepage": "https://www.dogfight360.com/blog/475/",
     "license": "Proprietary",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2019/04/UsbEAm-Hosts-Editor-v3.47.zip",
-    "hash": "7993d0695961499fd77a1a3287ee59354e789a8671ccd4f034d1c7d2bab188a7",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2017/03/UsbEAm-Hosts-Editor-v3.50.zip",
+    "hash": "07d04296c9e16906c8a1794f30259961daae197388aabf3c1f97615eea156c1f",
     "extract_dir": "UsbEAm Hosts Editor",
     "installer": {
         "script": "Get-ChildItem \"$dir\\UsbEAm Hosts Editor *.exe\" '' | Rename-Item -NewName \"UsbEAm Hosts Editor.exe\""
