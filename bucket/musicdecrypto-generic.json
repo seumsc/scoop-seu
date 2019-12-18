@@ -1,16 +1,16 @@
 {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A .NET Core implementation of music de-DRM for NetEase Cloud Music and QQ Music.",
     "homepage": "https://github.com/davidxuang/MusicDecrypto",
     "license": "MIT",
-    "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v1.1.0/MusicDecrypto-netcore3.0-generic.7z",
-    "hash": "3dd3faea4283249451e46e26d8700ea9233e0eec9a3bffac8bfac0b98fc59482",
+    "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v1.1.1/MusicDecrypto-netcore3.1-generic.7z",
+    "hash": "14c944718b229876e26904d7732b5085e5a5c1944a80ecf1b94a8aba4e3aef83",
     "bin": "MusicDecrypto.exe",
     "suggest": {
         ".NET Core Runtime/SDK": "main/dotnet"
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v$version/MusicDecrypto-netcore3.0-generic.7z"
+        "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v$version/MusicDecrypto-netcore3.1-generic.7z"
     }
 }
