@@ -1,0 +1,24 @@
+{
+    "version": "1.5.9",
+    "description": "A cross-platform RSS reader and Podcast player.",
+    "homepage": "http://irreader.fatecore.com/",
+    "license": "Proprietary",
+    "url": "http://irreader.fatecore.com/download/irreader-1.5.9-green.zip",
+    "hash": "be0950574d4f842ad9283f4ce91439036c1cc5c4b0625471ffb73868695a4f73",
+    "installer": {
+        "script": "Get-ChildItem -Path $dir -Filter *.exe | Rename-Item -NewName irreader.exe"
+    },
+    "shortcuts": [
+        [
+            "irreader.exe",
+            "FateCore irreader"
+        ]
+    ],
+    "checkver": {
+        "url": "http://irreader.fatecore.com/",
+        "regex": "irreader v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://irreader.fatecore.com/download/irreader-$version-green.zip"
+    }
+}
