@@ -1,10 +1,10 @@
 {
-    "version": "20200218",
+    "version": "20200225",
     "description": "Query the timetable of China Railway passenger transport.",
     "homepage": "http://www.lltskb.com/",
     "license": "Freeware",
     "url": "http://down.lltskb.com/lltskb.rar",
-    "hash": "c9a275ce14a6aa725a5b3ca75b5b27f5dd5843b01c21eeccea896d25f2ef6c0f",
+    "hash": "36f7021ff9ab17a8f24ce0d0bc981972bba0eb85763b0b0597b468eedc84582c",
     "shortcuts": [
         [
             "lltskb.exe",
