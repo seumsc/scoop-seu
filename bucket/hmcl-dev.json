@@ -1,10 +1,10 @@
 {
-    "version": "3.2.150",
+    "version": "3.2.151",
     "description": "A multi-functional, cross-platform Minecraft Launcher.",
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
-    "url": "http://ci.huangyuhui.net/job/HMCL/150/artifact/HMCL/build/libs/HMCL-3.2.150.exe#/HMCL.exe",
-    "hash": "sha1:3fbddbcaec3370887f5fd9002dfe5f8b6b5feec4",
+    "url": "http://ci.huangyuhui.net/job/HMCL/151/artifact/HMCL/build/libs/HMCL-3.2.151.exe#/HMCL.exe",
+    "hash": "sha1:8b14c5b2105df000c5d9fa81f31625d27f8df3f0",
     "pre_install": [
         "function ensureFile([String] $name) {",
         "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
