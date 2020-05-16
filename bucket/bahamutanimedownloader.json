@@ -1,14 +1,17 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "description": "Download animes from Bahamut.",
     "homepage": "https://github.com/c0re100/BahamutAnimeDownloader",
     "license": "GPL-2.0-only",
-    "url": "https://github.com/c0re100/BahamutAnimeDownloader/releases/download/1.6.1/AniDownloader.exe",
-    "hash": "13c4148c73875f847051441e0c034a30e6e8b2e98e6505199c221a1099175a5d",
+    "url": "https://github.com/c0re100/BahamutAnimeDownloader/releases/download/release-1.6.2/AniDownloader.exe",
+    "hash": "905619a9d0cb1acfb9132d62fdcd325d094eef33b6183cc7a1a88006716d26ef",
     "bin": "AniDownloader.exe",
     "depends": "main/ffmpeg",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/c0re100/BahamutAnimeDownloader/releases/latest",
+        "regex": "Bahamut Anime Downloader v([\\d.]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/c0re100/BahamutAnimeDownloader/releases/download/$version/AniDownloader.exe"
+        "url": "https://github.com/c0re100/BahamutAnimeDownloader/releases/download/release-$version/AniDownloader.exe"
     }
 }
