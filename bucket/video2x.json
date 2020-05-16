@@ -1,53 +1,45 @@
 {
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "Upscaling video with waifu2x and Anime4K.",
     "homepage": "https://k4yt3x.com/video2x/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/k4yt3x/video2x/releases/download/3.0.0/video2x-3.0.0-win32-light.zip",
-    "hash": "e64ce16c657e8ad5cdcce01360d669bf86a929df52b90aae743545bcd0bc7674",
-    "extract_dir": "video2x-3.0.0-win32-light",
+    "url": "https://github.com/k4yt3x/video2x/releases/download/4.0.0/video2x-4.0.0-win32-light.zip",
+    "hash": "55d68c19a986ccc28e7d49888a0541914f6f00e203ee46d519cc7c28f6a0a3bc",
+    "extract_dir": "video2x-4.0.0_beta4-win32-light",
     "bin": "video2x.exe",
     "shortcuts": [
         [
             "video2x_gui.exe",
-            "video2x"
+            "Video2X"
         ]
     ],
-    "persist": "video2x.json",
+    "persist": "video2x.yaml",
     "post_install": [
-        "$config = (Get-Content ($persist_dir + \"\\video2x.json\") -Encoding UTF8) | ConvertFrom-Json",
+        "$config = Get-Content -Path ($persist_dir + \"\\video2x.yaml\") -Encoding UTF8",
         "$shims_path = $env:SCOOP + \"\\shims\"",
         "$shims_global_path = $env:SCOOP_GLOBAL + \"\\shims\"",
         "if (scoop which waifu2x-caffe-cui) {",
-        "    $config.waifu2x_caffe.waifu2x_caffe_path = (scoop which waifu2x-caffe-cui)",
-        "} else {",
-        "    $config.waifu2x_caffe.waifu2x_caffe_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-caffe\\waifu2x-caffe-cui.exe\"",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\waifu2x-caffe\\waifu2x-caffe-cui', (scoop which waifu2x-caffe-cui))",
         "}",
         "if (scoop which waifu2x-converter-cpp) {",
-        "    $config.waifu2x_converter.waifu2x_converter_path = (scoop which waifu2x-converter-cpp)",
-        "} else {",
-        "    $config.waifu2x_converter.waifu2x_converter_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-converter-cpp.exe\"",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\waifu2x-converter-cpp\\waifu2x-converter-cpp', (scoop which waifu2x-converter-cpp))",
         "}",
         "if (scoop which waifu2x-ncnn-vulkan) {",
-        "    $config.waifu2x_ncnn_vulkan.waifu2x_ncnn_vulkan_path = (scoop which waifu2x-ncnn-vulkan)",
-        "} else {",
-        "    $config.waifu2x_ncnn_vulkan.waifu2x_ncnn_vulkan_path = $env:LOCALAPPDATA + \"\\video2x\\waifu2x-ncnn-vulkan\\waifu2x-ncnn-vulkan.exe\"",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\waifu2x-ncnn-vulkan\\waifu2x-ncnn-vulkan', (scoop which waifu2x-ncnn-vulkan))",
         "}",
-        "$config.anime4k.anime4k_path = $env:LOCALAPPDATA + \"\\video2x\\anime4k\\Anime4K.jar\"",
+        "if (scoop which srmd-ncnn-vulkan) {",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\srmd-ncnn-vulkan\\srmd-ncnn-vulkan', (scoop which srmd-ncnn-vulkan))",
+        "}",
+        "if (scoop which Anime4KCPP_CLI) {",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\anime4kcpp\\CLI\\Anime4KCPP_CLI\\Anime4KCPP_CLI', (scoop which Anime4KCPP_CLI))",
+        "}",
         "if (scoop which ffmpeg) {",
-        "    $config.ffmpeg.ffmpeg_path = Split-Path (scoop which ffmpeg)",
-        "} else {",
-        "    $config.ffmpeg.ffmpeg_path = $env:LOCALAPPDATA + \"\\video2x\\ffmpeg-latest-win64-static\\bin\"",
+        "    $config = $config.Replace('%LOCALAPPDATA%\\video2x\\ffmpeg-latest-win64-static\\bin', ([IO.Path]::GetDirectoryName((scoop which ffmpeg))))",
         "}",
-        "ConvertTo-Json $config | Set-Content ($persist_dir + \"\\video2x.json\") -Encoding UTF8",
-        "if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = resolve-path (split-path (split-path (scoop which scoop))) }",
-        "$formatjson = \"$env:SCOOP_HOME/bin/formatjson.ps1\"",
-        "Invoke-Expression -command \"& '$formatjson' -Dir '$persist_dir'\""
+        "[IO.File]::WriteAllLines(($persist_dir + \"\\video2x.yaml\"), $config)"
     ],
     "notes": [
-        "Since Anime4K has no official pre-built release for now,",
-        "run \"video2x_setup -d anime4k\" if you prefer to use it.",
-        "For waifu2x-caffe/waifu2x-converter-cpp/waifu2x-ncnn-vulkan,",
+        "For waifu2x-caffe/waifu2x-converter-cpp/waifu2x-ncnn-vulkan/srmd-ncnn-vulkan/anime4kcpp-cli,",
         "run \"scoop install <name>\" to install the particular implement,",
         "then run \"scoop update -f video2x\" to re-configure video2x paths."
     ],
@@ -56,7 +48,9 @@
         "Waifu2x implement (x64 only)": [
             "extras/waifu2x-caffe",
             "seu/waifu2x-converter-cpp",
-            "seu/waifu2x-ncnn-vulkan"
+            "seu/waifu2x-ncnn-vulkan",
+            "seu/srmd-ncnn-vulkan",
+            "seu/anime4kcpp-cli"
         ]
     },
     "checkver": {
