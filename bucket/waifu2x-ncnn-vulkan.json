@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20200414/waifu2x-ncnn-vulkan-20200414.zip",
-            "hash": "3f40523ee6ba63b69318d7ee7861e8312d548f2665123468b395ed806af89809"
+            "hash": "3f40523ee6ba63b69318d7ee7861e8312d548f2665123468b395ed806af89809",
+            "extract_dir": "waifu2x-ncnn-vulkan-20200414",
+            "bin": "waifu2x-ncnn-vulkan.exe"
         }
     },
-    "extract_dir": "waifu2x-ncnn-vulkan-20200414",
-    "bin": "waifu2x-ncnn-vulkan.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

@@ -7,19 +7,19 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/4.2.0.6/ASF-win-x64.zip#/dl.7z",
-            "hash": "28de7d578437f6a4cdc9bc0c30b333bea87c3841f8329eaf36c591aa34a515b8"
+            "hash": "28de7d578437f6a4cdc9bc0c30b333bea87c3841f8329eaf36c591aa34a515b8",
+            "bin": "ArchiSteamFarm.exe",
+            "shortcuts": [
+                [
+                    "ArchiSteamFarm.exe",
+                    "ArchiSteamFarm"
+                ]
+            ]
         }
     },
-    "bin": "ArchiSteamFarm.exe",
     "persist": [
         "config",
         "plugins"
-    ],
-    "shortcuts": [
-        [
-            "ArchiSteamFarm.exe",
-            "ArchiSteamFarm"
-        ]
     ],
     "checkver": "github",
     "autoupdate": {

@@ -6,10 +6,10 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/DeadSix27/waifu2x-converter-cpp/releases/download/v5.3.3/waifu2x-DeadSix27-win64_v533.zip",
-            "hash": "6c2565ba883a68efadce2033f099dca58cc4c04f1e32af6702cfea007ea23e5f"
+            "hash": "6c2565ba883a68efadce2033f099dca58cc4c04f1e32af6702cfea007ea23e5f",
+            "bin": "waifu2x-converter-cpp.exe"
         }
     },
-    "bin": "waifu2x-converter-cpp.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
