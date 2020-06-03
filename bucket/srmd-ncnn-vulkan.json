@@ -1,13 +1,13 @@
 {
-    "version": "20200224",
+    "version": "20200530",
     "homepage": "https://github.com/nihui/srmd-ncnn-vulkan",
     "description": "SRMD super resolution implemented with ncnn library.",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nihui/srmd-ncnn-vulkan/releases/download/20200224/srmd-ncnn-vulkan-20200224.zip",
-            "hash": "4ab6136b05fa4fc310162917942efe8512ded96444a69eeb868ca6792566e207",
-            "extract_dir": "srmd-ncnn-vulkan-20200224",
+            "url": "https://github.com/nihui/srmd-ncnn-vulkan/releases/download/20200530/srmd-ncnn-vulkan-20200530-windows.zip",
+            "hash": "3026ac1ec31af29525c9be1573415e28c006ccf5b6b183cc25eb4096959b597b",
+            "extract_dir": "srmd-ncnn-vulkan-20200530",
             "bin": "srmd-ncnn-vulkan.exe"
         }
     },
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/nihui/srmd-ncnn-vulkan/releases/download/$version/srmd-ncnn-vulkan-$version.zip",
+                "url": "https://github.com/nihui/srmd-ncnn-vulkan/releases/download/$version/srmd-ncnn-vulkan-$version-windows.zip",
                 "extract_dir": "srmd-ncnn-vulkan-$version"
             }
         }
