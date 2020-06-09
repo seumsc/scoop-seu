@@ -1,12 +1,12 @@
 {
-    "version": "1.8.1",
+    "version": "2.0.0",
     "homepage": "https://github.com/TianZerL/Anime4KCPP",
     "description": "A high performance implementation of Anime4K with GPU acceleration.",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v1.8.1/Anime4KCPP_CLI-1.8.1-Win64-msvc.7z",
-            "hash": "b7fadc688de388f338c06633d0a11c74498b5c2dc2b8208fc877d08b2557048e",
+            "url": "https://github.com/TianZerL/Anime4KCPP/releases/download/v2.0.0/Anime4KCPP_CLI-2.0.0-Win64-msvc.7z",
+            "hash": "5262b65e4951f7b42c2c95d3dd6383d35ea3d9576d5bc74418154b823b1484b0",
             "extract_dir": "CLI\\Anime4KCPP_CLI",
             "bin": "Anime4KCPP_CLI.exe"
         }
