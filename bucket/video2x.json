@@ -1,11 +1,11 @@
 {
-    "version": "4.4.1",
+    "version": "4.6.0",
     "description": "Upscaling video with waifu2x and Anime4K.",
     "homepage": "https://k4yt3x.com/video2x/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/k4yt3x/video2x/releases/download/4.4.1/video2x-4.4.1-win32-light.zip",
-    "hash": "a680385b1ca958a206b22d8aa947a3e5b33ea7fe15ad3c755ed4140ae361d8ca",
-    "extract_dir": "video2x-4.4.1-win32-light",
+    "url": "https://github.com/k4yt3x/video2x/releases/download/4.6.0/video2x-4.6.0-win32-light.zip",
+    "hash": "d258ceeab5509eda307b13bc7bf5bca3162700e1feacfd4e33ce2bb2e655cb1b",
+    "extract_dir": "video2x-4.6.0-win32-light",
     "bin": "video2x.exe",
     "shortcuts": [
         [
