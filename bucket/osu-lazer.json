@@ -1,10 +1,10 @@
 {
-    "version": "2020.602.0",
+    "version": "2020.603.0",
     "description": "Rhythm is just a click away!",
     "homepage": "https://osu.ppy.sh/",
     "license": "MIT",
-    "url": "https://github.com/ppy/osu/releases/download/2020.602.0/osulazer-2020.602.0-full.nupkg#/dl.zip",
-    "hash": "sha1:df5644121837b2cfffafcec5b1fb06243563b749",
+    "url": "https://github.com/ppy/osu/releases/download/2020.603.0/osulazer-2020.603.0-full.nupkg#/dl.zip",
+    "hash": "sha1:f5d983c9a3fd112dd347d12a37a573e0c2e45031",
     "extract_dir": "lib\\net45",
     "shortcuts": [
         [
