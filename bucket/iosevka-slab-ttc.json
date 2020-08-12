@@ -1,10 +1,10 @@
 {
-    "version": "3.3.1",
+    "version": "3.4.1",
     "description": "Slender typeface for code, from code.",
     "homepage": "https://github.com/be5invis/Iosevka",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v3.3.1/ttc-iosevka-slab-3.3.1.zip",
-    "hash": "882664726f15ff981c75f7f977b7903e459fcc70468e998640db23b6000799d1",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v3.4.1/ttc-iosevka-slab-3.4.1.zip",
+    "hash": "aa1e436b35b49e30b0791ef5113d5f306dd10fb4d0b77cc4c70f74db60c2bc83",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/ttc-iosevka-slab-$version.zip"
