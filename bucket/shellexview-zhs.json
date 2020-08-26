@@ -37,16 +37,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": [
-                    "https://www.nirsoft.net/utils/shexview.zip",
-                    "https://www.nirsoft.net/utils/trans/shexview_schinese1.zip"
-                ]
+                "url": "https://www.nirsoft.net/utils/shexview.zip"
             },
             "64bit": {
-                "url": [
-                    "https://www.nirsoft.net/utils/shexview-x64.zip",
-                    "https://www.nirsoft.net/utils/trans/shexview_schinese1.zip"
-                ]
+                "url": "https://www.nirsoft.net/utils/shexview-x64.zip"
             }
         }
     }
