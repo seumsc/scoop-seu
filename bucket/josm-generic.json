@@ -1,14 +1,14 @@
 {
-    "version": "17013",
+    "version": "17084",
     "description": "An extensible editor for ​OpenStreetMap",
     "homepage": "https://josm.openstreetmap.de/",
     "license": "GPL-2.0-or-later",
     "url": [
-        "https://josm.openstreetmap.de/download/josm-snapshot-17013.jar",
+        "https://josm.openstreetmap.de/download/josm-snapshot-17084.jar",
         "https://raw.githubusercontent.com/openstreetmap/josm/master/native/windows/logo.ico"
     ],
     "hash": [
-        "12ad24cd37ce88371062caaaf5550a0ab36f1234d5b949e9007ab155268eee35",
+        "a4ffa4e63e38399121083bada88482335aa122c0b72778d795e18cbdebbf7f2b",
         "8fa65ecdf506316ce5630c9e55ff1bf245516527bfb774d5b1588f4a72bbebde"
     ],
     "pre_install": [
