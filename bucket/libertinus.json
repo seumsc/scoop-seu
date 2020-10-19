@@ -1,0 +1,32 @@
+{
+    "version": "7.020",
+    "description": "The Libertinus font family.",
+    "homepage": "https://github.com/alerque/libertinus",
+    "license": "OFL-1.1",
+    "url": "https://github.com/alerque/libertinus/releases/download/v7.020/Libertinus-7.020.zip",
+    "hash": "8de9ada6b5cd7b73412ae39bc2e7ecb5c184050a6e7ef144f3a1df9c4b24bcc0",
+    "extract_dir": "Libertinus-7.020/static/OTF",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/alerque/libertinus/releases/download/v$version/Libertinus-$version.zip",
+        "extract_dir": "Libertinus-$version/static/OTF"
+    },
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.otf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}",
+            "Remove-Item $dir/Libertinus-* -Recurse"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.otf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'Libertinus' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
