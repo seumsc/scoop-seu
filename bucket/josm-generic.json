@@ -1,20 +1,20 @@
 {
-    "version": "17084",
+    "version": "17329",
     "description": "An extensible editor for ​OpenStreetMap",
     "homepage": "https://josm.openstreetmap.de/",
     "license": "GPL-2.0-or-later",
     "url": [
-        "https://josm.openstreetmap.de/download/josm-snapshot-17084.jar",
+        "https://josm.openstreetmap.de/download/josm-snapshot-17329.jar",
         "https://raw.githubusercontent.com/openstreetmap/josm/master/native/windows/logo.ico"
     ],
     "hash": [
-        "a4ffa4e63e38399121083bada88482335aa122c0b72778d795e18cbdebbf7f2b",
+        "7314e3434ab9271366d54f9f4891fbeec69aff16aa07c954fab8a9a90c092a43",
         "8fa65ecdf506316ce5630c9e55ff1bf245516527bfb774d5b1588f4a72bbebde"
     ],
     "pre_install": [
         "Push-Location",
         "Set-Location $dir",
-        "Set-Content -Value (\"javaw -D64 -jar \" + (ls josm*.jar)[0].Name) -Path josm.cmd",
+        "Set-Content -Value (\"@echo off`nif `\"%1`\" == `\"h`\" goto begin`nmshta vbscript:createobject(`\"wscript.shell`\").run(`\"%~nx0 h`\",0)(window.close)&&exit`n:begin`njavaw -D64 -jar \" + (Get-ChildItem josm*.jar)[0].Name) -Path josm.cmd",
         "Pop-Location"
     ],
     "suggest": {
