@@ -3,17 +3,17 @@
     "description": "Slender typeface for code, from code.",
     "homepage": "https://typeof.net/Iosevka/",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v4.0.0/ttc-iosevka-4.0.0.zip",
-    "hash": "689e97f69cf207203d232f14382fa746bfeb5988c73d24fd2fcfcd93d1559417",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v4.0.0/ttc-iosevka-etoile-4.0.0.zip",
+    "hash": "5c634c862aa47ae29b018c559c8cb392a130058606227577246a4a6c4747db2f",
     "checkver": {
         "github": "https://github.com/be5invis/Iosevka"
     },
     "autoupdate": {
-        "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/ttc-iosevka-$version.zip"
+        "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/ttc-iosevka-etoile-$version.zip"
     },
     "installer": {
         "script": [
-            "Get-ChildItem $dir -filter 'iosevka*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'iosevka-etoile*.ttc' | ForEach-Object {",
             "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
             "}"
@@ -21,11 +21,11 @@
     },
     "uninstaller": {
         "script": [
-            "Get-ChildItem $dir -filter 'iosevka*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'iosevka-etoile*.ttc' | ForEach-Object {",
             "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
-            "Write-Host \"The 'Iosevka' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+            "Write-Host \"The 'Iosevka Etoile' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
         ]
     }
 }
