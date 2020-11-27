@@ -16,7 +16,7 @@
         ]
     ],
     "checkver": {
-        "regex": "items/(?<code>[\\dA-Z!:]+)/UsbEAm_Hosts_Editor_v(?<version>[\\d.]+).zip"
+        "regex": "UsbEAm Hosts Editor v([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://storage.live.com/items/$matchCode/UsbEAm_Hosts_Editor_v$version.zip"

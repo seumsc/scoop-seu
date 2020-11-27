@@ -22,7 +22,7 @@
     ],
     "checkver": {
         "url": "https://www.willus.com/k2pdfopt/k2pdfopt_version.txt",
-        "regex": "[vV](?<version>\\d[\\d.a-z]+)"
+        "regex": "[vV](\\d[\\d.a-z]+)"
     },
     "autoupdate": {
         "architecture": {
@@ -30,14 +30,14 @@
                 "url": "https://github.com/davidxuang/k2pdfopt/releases/download/v$version/k2pdfopt-win-x64.exe#/k2pdfopt.exe",
                 "hash": {
                     "url": "https://www.willus.com/k2pdfopt/download/sha256/$version/win64/sha256.txt",
-                    "find": "([a-fA-F0-9]{64})"
+                    "find": "$sha256"
                 }
             },
             "32bit": {
                 "url": "https://github.com/davidxuang/k2pdfopt/releases/download/v$version/k2pdfopt-win-x86.exe#/k2pdfopt.exe",
                 "hash": {
                     "url": "https://www.willus.com/k2pdfopt/download/sha256/$version/win32/sha256.txt",
-                    "find": "([a-fA-F0-9]{64})"
+                    "find": "$sha256"
                 }
             }
         }
