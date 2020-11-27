@@ -12,7 +12,7 @@
         ]
     ],
     "checkver": {
-        "regex": "down.bookfere.com\\\/s\\\/(?<code>.*?)<strong>v([\\d.]+)<\\\/strong>"
+        "regex": "down.bookfere.com\\/s\\/(?<code>.*?)<strong>v([\\d.]+)<\\/strong>"
     },
     "autoupdate": {
         "url": "https://down.bookfere.com/s/$matchCode/download#/dl.zip"

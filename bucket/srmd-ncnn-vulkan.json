@@ -7,10 +7,10 @@
         "64bit": {
             "url": "https://github.com/nihui/srmd-ncnn-vulkan/releases/download/20200818/srmd-ncnn-vulkan-20200818-windows.zip",
             "hash": "039f467bea9fe47cd459acde9d4bc3d3ea9e2c5888ee4bafba66ab64b608659d",
-            "extract_dir": "srmd-ncnn-vulkan-20200818",
-            "bin": "srmd-ncnn-vulkan.exe"
+            "extract_dir": "srmd-ncnn-vulkan-20200818"
         }
     },
+    "bin": "srmd-ncnn-vulkan.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

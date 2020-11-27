@@ -6,10 +6,10 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v3.2.0/MusicDecrypto-win-x64-v3.2.0.7z",
-            "hash": "b57312bbf794262e438d6c92da46258806f0b5ab9d358ebb6c89373a88ba16f9",
-            "bin": "MusicDecrypto.exe"
+            "hash": "b57312bbf794262e438d6c92da46258806f0b5ab9d358ebb6c89373a88ba16f9"
         }
     },
+    "bin": "MusicDecrypto.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
