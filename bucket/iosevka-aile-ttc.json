@@ -1,10 +1,10 @@
 {
-    "version": "4.0.1",
+    "version": "4.0.2",
     "description": "Slender typeface for code, from code.",
     "homepage": "https://typeof.net/Iosevka/",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v4.0.1/ttc-iosevka-aile-4.0.1.zip",
-    "hash": "4840bd701d609646a7a48fdd123440b2fe708477cabd166439bf8e51797f38b5",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v4.0.2/ttc-iosevka-aile-4.0.2.zip",
+    "hash": "5f4de75bb7b08d395e272c219c2ff89168050ba67653a883900f520d1c576a06",
     "checkver": {
         "github": "https://github.com/be5invis/Iosevka"
     },
