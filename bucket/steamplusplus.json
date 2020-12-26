@@ -1,10 +1,10 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3.1",
     "description": "All-in-one toolbox for Steam platform.",
     "homepage": "https://github.com/rmbadmin/SteamTools",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/rmbadmin/SteamTools/releases/download/1.0.2/Steam++.zip",
-    "hash": "35053b7aca3eaa465785558ebc9431488169d07897ee5828a50ba2e90a7edb6f",
+    "url": "https://github.com/rmbadmin/SteamTools/releases/download/1.0.3.1/Steam++.v1.0.3.1.zip",
+    "hash": "dc6e6f160f7d3dfbb9c7dac47e61354b5bdf8489774dcda0ff5993990674a6fe",
     "shortcuts": [
         [
             "Steam++.exe",
@@ -13,6 +13,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/rmbadmin/SteamTools/releases/download/$version/Steam++.zip"
+        "url": "https://github.com/rmbadmin/SteamTools/releases/download/$version/Steam++.v$version.zip"
     }
 }
