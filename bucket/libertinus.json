@@ -1,11 +1,11 @@
 {
-    "version": "7.020",
+    "version": "7.031",
     "description": "The Libertinus font family.",
     "homepage": "https://github.com/alerque/libertinus",
     "license": "OFL-1.1",
-    "url": "https://github.com/alerque/libertinus/releases/download/v7.020/Libertinus-7.020.zip",
-    "hash": "8de9ada6b5cd7b73412ae39bc2e7ecb5c184050a6e7ef144f3a1df9c4b24bcc0",
-    "extract_dir": "Libertinus-7.020/static/OTF",
+    "url": "https://github.com/alerque/libertinus/releases/download/v7.031/Libertinus-7.031.zip",
+    "hash": "4e40e331cdd34a82afe822c51774957eec1e66a98affd4c8377e17d7106933eb",
+    "extract_dir": "Libertinus-7.031/static/OTF",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/alerque/libertinus/releases/download/v$version/Libertinus-$version.zip",
