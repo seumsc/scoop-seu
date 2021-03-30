@@ -1,15 +1,15 @@
 on:
   schedule:
-  - cron: '*/30 * * * *'
+  - cron: '0 * * * *'
 name: Excavator
 jobs:
   excavate:
-    name: Excavate
-    runs-on: ubuntu-latest
+    name: Excavator
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@master
-    - name: Excavate
-      uses: Ash258/Scoop-GithubActions@stable
+    - name: Excavator
+      uses: Ash258/Scoop-GithubActions@stable-win
       env:
         GITH_EMAIL: davidxuang@live.com
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
