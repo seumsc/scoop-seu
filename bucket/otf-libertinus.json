@@ -17,7 +17,7 @@
             "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
             "}",
-            "Remove-Item $dir/Libertinus-* -Recurse"
+            "Get-ChildItem | Where-Object { $_.Name -Match \"[^-]+-[\\d.]+\" } | Remove-Item -Recurse"
         ]
     },
     "uninstaller": {
