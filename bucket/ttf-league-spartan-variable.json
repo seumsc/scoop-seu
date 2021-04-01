@@ -1,0 +1,34 @@
+{
+    "version": "2.220",
+    "description": "A fantastic new revival of ATF's classic Spartan.",
+    "homepage": "https://www.theleagueofmoveabletype.com/league-spartan",
+    "license": "OFL-1.1",
+    "url": "https://github.com/theleagueof/league-spartan/releases/download/2.220/LeagueSpartan-2.220.tar.xz",
+    "hash": "141a96e215554871504dca16be159901bbb0d56f3a84224f39fe472c7ab4ef47",
+    "extract_dir": "LeagueSpartan-2.220/variable/TTF",
+    "checkver": {
+        "github": "https://github.com/theleagueof/league-spartan"
+    },
+    "autoupdate": {
+        "url": "https://github.com/theleagueof/league-spartan/releases/download/$version/LeagueSpartan-$version.tar.xz",
+        "extract_dir": "LeagueSpartan-$version/variable/TTF"
+    },
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}",
+            "Get-ChildItem $dir | Where-Object { $_.Name -Match \"[^-]+-[\\d.]+\" } | Remove-Item -Recurse"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'League Spartan' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
