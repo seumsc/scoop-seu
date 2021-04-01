@@ -1,0 +1,34 @@
+{
+    "version": "2.220",
+    "description": "A monospace typeface inspired by Fira Mono, Libertinus Mono, and Courier.",
+    "homepage": "https://www.theleagueofmoveabletype.com/league-mono",
+    "license": "OFL-1.1",
+    "url": "https://github.com/theleagueof/league-mono/releases/download/2.220/LeagueMono-2.220.tar.xz",
+    "hash": "8cd84dfe693b4ffc4eb6f443576c3e90d85cb40e978596dc5aaf10f38619d58c",
+    "extract_dir": "LeagueMono-2.220/variable/TTF",
+    "checkver": {
+        "github": "https://github.com/theleagueof/league-mono"
+    },
+    "autoupdate": {
+        "url": "https://github.com/theleagueof/league-mono/releases/download/$version/LeagueMono-$version.tar.xz",
+        "extract_dir": "LeagueMono-$version/variable/TTF"
+    },
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}",
+            "Get-ChildItem $dir | Where-Object { $_.Name -Match \"[^-]+-[\\d.]+\" } | Remove-Item -Recurse"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter '*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'League mono' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
