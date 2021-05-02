@@ -1,11 +1,11 @@
 {
     "##": "Rename from zip to 7z is needed due to 'unsupported compression method' error.",
-    "version": "5.0.6.3",
+    "version": "5.0.6.6",
     "description": "Farm Steam cards from multiple accounts simultaneously.",
     "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
     "license": "Apache-2.0",
-    "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.0.6.3/ASF-generic.zip#/dl.7z",
-    "hash": "1630b3c872180945fc1c6b360193d6948698ce57710e60df36e352141402e6dc",
+    "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.0.6.6/ASF-generic.zip#/dl.7z",
+    "hash": "e93b9f5f00f3343e795a82c324b9d321dffbc6442e8ba7a87729a5ef4ce88ad0",
     "bin": "ArchiSteamFarm.cmd",
     "persist": [
         "config",
