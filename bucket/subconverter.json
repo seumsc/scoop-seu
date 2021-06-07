@@ -15,7 +15,11 @@
     },
     "extract_dir": "subconverter",
     "bin": "subconverter.exe",
-    "persist": "profiles",
+    "persist": [
+        "config",
+        "profiles",
+        "rules"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
