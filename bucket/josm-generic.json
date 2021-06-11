@@ -3,6 +3,9 @@
     "description": "An extensible editor for ​OpenStreetMap",
     "homepage": "https://josm.openstreetmap.de/",
     "license": "GPL-2.0-or-later",
+    "suggest": {
+        "JRE with JFX": "java/zulufx11-jre"
+    },
     "url": [
         "https://josm.openstreetmap.de/download/josm-snapshot-17919.jar",
         "https://raw.githubusercontent.com/openstreetmap/josm/master/native/windows/logo.ico"
@@ -17,14 +20,6 @@
         "Set-Content -Value (\"@echo off`nif `\"%1`\" == `\"h`\" goto begin`nmshta vbscript:createobject(`\"wscript.shell`\").run(`\"%~nx0 h`\",0)(window.close)&&exit`n:begin`njavaw -D64 -jar \" + (Get-ChildItem josm*.jar)[0].Name) -Path josm.cmd",
         "Pop-Location"
     ],
-    "suggest": {
-        "JRE with JFX": [
-            "java/zulufx11-jre",
-            "java/corretto8-jre",
-            "java/liberica8-jre",
-            "java/zulufx8-jre"
-        ]
-    },
     "shortcuts": [
         [
             "josm.cmd",

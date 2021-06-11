@@ -3,6 +3,9 @@
     "description": "All-in-one toolbox for Steam platform.",
     "homepage": "https://github.com/SteamTools-Team/SteamTools",
     "license": "GPL-3.0-or-later",
+    "suggest": {
+        ".NET Runtime/SDK": "main/dotnet"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/2.4.1/Steam++_win_x64_v2.4.1.7z",

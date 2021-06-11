@@ -3,6 +3,16 @@
     "description": "Upscaling video with waifu2x and Anime4K.",
     "homepage": "https://k4yt3x.com/video2x/",
     "license": "GPL-3.0-only",
+    "depends": "main/ffmpeg",
+    "suggest": {
+        "Implementations (x64 only)": [
+            "extras/waifu2x-caffe",
+            "seu/waifu2x-converter-cpp",
+            "seu/waifu2x-ncnn-vulkan",
+            "seu/srmd-ncnn-vulkan",
+            "seu/anime4kcpp-cli"
+        ]
+    },
     "url": "https://github.com/k4yt3x/video2x/releases/download/4.8.1/video2x-4.8.1-win32-light.zip",
     "hash": "9c746151cbfa432887759fb783c78a70ed273a6a4008c0bf030220fcd79d29be",
     "extract_dir": "video2x-4.8.1-win32-light",
@@ -43,16 +53,6 @@
         "run \"scoop install <name>\" to install the particular implement,",
         "then run \"scoop update -f video2x\" to re-configure video2x paths."
     ],
-    "depends": "main/ffmpeg",
-    "suggest": {
-        "Waifu2x implement (x64 only)": [
-            "extras/waifu2x-caffe",
-            "seu/waifu2x-converter-cpp",
-            "seu/waifu2x-ncnn-vulkan",
-            "seu/srmd-ncnn-vulkan",
-            "seu/anime4kcpp-cli"
-        ]
-    },
     "checkver": {
         "github": "https://github.com/k4yt3x/video2x"
     },

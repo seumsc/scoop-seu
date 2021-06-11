@@ -3,6 +3,12 @@
     "description": "A multi-functional, cross-platform Minecraft Launcher.",
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
+    "suggest": {
+        "JRE with JFX": [
+            "java/zulufx8-jre",
+            "java/zulufx16-jre"
+        ]
+    },
     "url": "https://ci.huangyuhui.net/job/HMCL/188/artifact/HMCL/build/libs/HMCL-3.3.188.exe#/HMCL.exe",
     "hash": "sha1:64de508fedef340434c5d1bdfea54c2ce79aad96",
     "pre_install": [
@@ -24,14 +30,6 @@
         "hmcl.json",
         ".minecraft"
     ],
-    "suggest": {
-        "JRE with JFX": [
-            "java/corretto8-jre",
-            "java/liberica8-jre",
-            "java/zulufx8-jre",
-            "java/zulufx11-jre"
-        ]
-    },
     "checkver": {
         "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
         "jsonpath": "$.version"
