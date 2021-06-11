@@ -1,18 +1,35 @@
 {
-    "version": "2.3.0",
+    "version": "2.4.1",
     "description": "All-in-one toolbox for Steam platform.",
-    "homepage": "https://github.com/rmbadmin/SteamTools",
+    "homepage": "https://github.com/SteamTools-Team/SteamTools",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/rmbadmin/SteamTools/releases/download/2.3.0/Steam++_win_x86_v2.3.0.7z",
-    "hash": "5da9346c91ccef3d63d85a6257b752502f0cb68d339920d7fdd4f09710e53e15",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/2.4.1/Steam++_win_x64_v2.4.1.7z",
+            "hash": "f585575e8c1466f09dd351a9f2a1e0d98669b38c8df6ba0cf405e4e5e9863c12"
+        }
+    },
     "shortcuts": [
         [
             "Steam++.exe",
             "Steam++"
         ]
     ],
+    "persist": [
+        "AppData",
+        "Cache",
+        "Logs"
+    ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/rmbadmin/SteamTools/releases/download/$version/Steam++_win_x86_v$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/$version/Steam++_win_x64_v$version.7z",
+                "hash": {
+                    "url": "https://github.com/SteamTools-Team/SteamTools/releases/latest",
+                    "regex": "Steam\\+\\+_win_x64_v[\\d.]+\\.7z</td>\\n<td>([a-fA-F0-9]{64})"
+                }
+            }
+        }
     }
 }
