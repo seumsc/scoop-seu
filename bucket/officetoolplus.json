@@ -1,10 +1,10 @@
 {
-    "version": "8.1.5.15",
+    "version": "8.2.2.6",
     "description": "Manage your Microsoft Office install.",
     "homepage": "https://otp.landian.vip/",
     "license": "Proprietary",
-    "url": "https://github.com/YerongAI/Office-Tool/releases/download/8.1.5.15/Office-Tool-v8.1.zip",
-    "hash": "cad4ae079bb9aa30c657a6dca405a788385bd8c385f2fddbcf54f264946cec90",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/8.2.2.6/Office-Tool-v8.2.zip",
+    "hash": "22abbe4c28b3e111069644e6a40350f6122c2911a75c12c2d05bd037325e6fef",
     "extract_dir": "Office Tool",
     "shortcuts": [
         [
@@ -20,6 +20,10 @@
         "github": "https://github.com/YerongAI/Office-Tool"
     },
     "autoupdate": {
-        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office-Tool-v$majorVersion.$minorVersion.zip"
+        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office-Tool-v$majorVersion.$minorVersion.zip",
+        "hash": {
+            "url": "https://github.com/YerongAI/Office-Tool/releases/latest",
+            "regex": "Office_Tool_v[\\d.]+\\.zip</td>\\n<td [a-z\"=]+>([a-fA-F0-9]{64})"
+        }
     }
 }
