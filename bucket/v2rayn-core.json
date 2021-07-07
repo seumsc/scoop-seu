@@ -1,10 +1,10 @@
 {
-    "version": "4.19",
+    "version": "4.18",
     "description": "GUI client based for v2ray-core and xray-core.",
     "homepage": "https://github.com/2dust/v2rayN",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/2dust/v2rayN/releases/download/4.19/v2rayN-Core.zip",
-    "hash": "a6e7bacdb726c2d3526135912206544d588746effa04fa3ef3273ef848719979",
+    "url": "https://github.com/2dust/v2rayN/releases/download/4.18/v2rayN-Core.zip",
+    "hash": "4bb71be8387861d77ac2f4c030374c5b2759f0672211b92aebd52463750a1c1f",
     "extract_dir": "v2rayN-Core",
     "pre_install": [
         "foreach ($name in @('guiNConfig.json', 'user-wininet.json')) {",
