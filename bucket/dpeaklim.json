@@ -8,14 +8,10 @@
     "extract_dir": "dpeaklim",
     "architecture": {
         "64bit": {
-            "bin": [
-                "amd64\\dpeaklim.exe"
-            ]
+            "bin": "amd64\\dpeaklim.exe"
         },
         "32bit": {
-            "bin": [
-                "x86\\dpeaklim.exe"
-            ]
+            "bin": "x86\\dpeaklim.exe"
         }
     },
     "checkver": {
