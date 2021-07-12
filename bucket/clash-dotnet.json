@@ -23,7 +23,10 @@
             "Clash .NET"
         ]
     ],
-    "persist": "Bin\\SubConverter",
+    "persist": [
+        "Bin\\SubConverter",
+        "data"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
