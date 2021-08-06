@@ -23,7 +23,7 @@
         "github": "https://github.com/YerongAI/Office-Tool"
     },
     "autoupdate": {
-        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office_Tool_v$majorVersion.$minorVersion.zip",
+        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/Office_Tool_v$version.zip",
         "hash": {
             "url": "https://github.com/YerongAI/Office-Tool/releases/latest",
             "regex": "Office_Tool_v[\\d.]+\\.zip</td>\\n<td [a-z\"=]+>([a-fA-F0-9]{64})"
