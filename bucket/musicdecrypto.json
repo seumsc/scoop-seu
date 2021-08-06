@@ -5,16 +5,16 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v3.3.0/MusicDecrypto-win-x64-v3.3.0.7z",
+            "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v3.3.0/musicdecrypto-win-x64-v3.3.0.7z",
             "hash": "bb387a2d56de93da73071f1106fe4b160ecc3df75c1d226311b93ef79b202b4e"
         }
     },
-    "bin": "MusicDecrypto.exe",
+    "bin": "musicdecrypto.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v$version/MusicDecrypto-win-x64-v$version.7z",
+                "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v$version/musicdecrypto-win-x64-v$version.7z",
                 "hash": {
                     "url": "$url.sha256"
                 }
