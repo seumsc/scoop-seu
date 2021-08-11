@@ -1,13 +1,13 @@
 {
-    "version": "8.2.4.1",
+    "version": "8.2.4.3",
     "description": "Manage your Microsoft Office install.",
     "homepage": "https://otp.landian.vip/",
     "license": "Proprietary",
     "suggest": {
         ".NET Runtime/SDK": "main/dotnet"
     },
-    "url": "https://github.com/YerongAI/Office-Tool/releases/download/8.2.4.1/Office_Tool_v8.2.4.1.zip",
-    "hash": "0469a931657423dcef03b1fb6524a5e442ed65bcc975acf5305a955ac277e5ce",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/8.2.4.3/Office_Tool_v8.2.4.3.zip",
+    "hash": "034f48bf13d87973b85ac6d53ab03ad29ba67f47aa83ae0aa886f8b46c7b5612",
     "extract_dir": "Office Tool",
     "shortcuts": [
         [
