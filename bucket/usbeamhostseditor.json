@@ -1,11 +1,11 @@
 {
-    "version": "3.50",
+    "version": "3.62",
     "description": "Edit hosts to reach international game servers in mainland China.",
     "homepage": "https://www.dogfight360.com/blog/475/",
     "license": "Freeware",
-    "url": "https://storage.live.com/items/AE4F00B838303018!8645:/UsbEAm_Hosts_Editor_v3.50.zip",
-    "hash": "2def3989a6d4f9736535fd57d938f35c9b22bce11613ffd4b5a0189f11d99d99",
-    "extract_dir": "UsbEAm Hosts Editor",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2017/03/UsbEAm-Hosts-Editor-v3.62_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#/dl",
+    "hash": "cbeb27c7c8c63ca7ef10dbc09b6da4325893b5b1807d13161901a3725218fe0f",
+    "pre_install": "Expand-7zipArchive \"$dir\\dl\" -ExtractDir 'UsbEAm Hosts Editor' -Removal -pdogfight360",
     "installer": {
         "script": "Get-ChildItem \"$dir\\UsbEAm Hosts Editor *.exe\" '' | Rename-Item -NewName \"UsbEAm Hosts Editor.exe\""
     },
@@ -16,9 +16,9 @@
         ]
     ],
     "checkver": {
-        "regex": "UsbEAm Hosts Editor v([\\d.]+)"
+        "regex": "UsbEAm-Hosts-Editor-v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://storage.live.com/items/$matchCode/UsbEAm_Hosts_Editor_v$version.zip"
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/2017/03/UsbEAm-Hosts-Editor-v$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#/dl"
     }
 }
