@@ -1,16 +1,16 @@
 {
-    "version": "0.18.0",
+    "version": "0.18.1",
     "description": "A Windows GUI for Clash, a proxy client program.",
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.18.0/Clash.for.Windows-0.18.0-win.7z",
-            "hash": "0e95346141c50b8099441e726b206c79a2c22aca791bb4b1806aeb58e9a799f5"
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.18.1/Clash.for.Windows-0.18.1-win.7z",
+            "hash": "9ff0e7096d69ce2e9e94299804d34b2e7ef945b29384cb9d0b70ed5b46adbef6"
         },
         "32bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.18.0/Clash.for.Windows-0.18.0-ia32-win.7z",
-            "hash": "b8f81888b20daeafe9b5547bdc6db3998f064d7bc352d00e79c8e1ebac334a5d"
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.18.1/Clash.for.Windows-0.18.1-ia32-win.7z",
+            "hash": "657588d7fdc61ba671d5cfeb8230e87dbb271d5d3a4a93488408d2e65ae82071"
         }
     },
     "shortcuts": [
