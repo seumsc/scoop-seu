@@ -1,12 +1,12 @@
 {
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "A .NET implementation of music de-DRM for NetEase Cloud Music and QQ Music.",
     "homepage": "https://github.com/davidxuang/MusicDecrypto",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v1.3.0/musicdecrypto-win-x64-v1.3.0.7z",
-            "hash": "bb387a2d56de93da73071f1106fe4b160ecc3df75c1d226311b93ef79b202b4e"
+            "url": "https://github.com/davidxuang/MusicDecrypto/releases/download/v1.3.1/musicdecrypto-win-x64-v1.3.1.7z",
+            "hash": "7606d0ac69bb8eb07569a00cc0b2ca72c75e0d435fa150d16bc19ffc03b85b50"
         }
     },
     "bin": "musicdecrypto.exe",
