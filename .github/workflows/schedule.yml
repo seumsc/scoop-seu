@@ -1,7 +1,13 @@
 on:
   schedule:
   - cron: '0 * * * *'
+
 name: Excavator
+
+concurrency:
+    group: ${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
   excavate:
     name: Excavator
@@ -9,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Excavator
-      uses: Ash258/Scoop-GithubActions@stable-win
+      uses: ScoopInstaller/GithubActions@main
       env:
-        GITH_EMAIL: davidxuang@live.com
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USER_EMAIL: davidxuang@live.com
         SKIP_UPDATED: '1'
