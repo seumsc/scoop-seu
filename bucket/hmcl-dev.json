@@ -9,7 +9,7 @@
             "java/zulufx16-jre"
         ]
     },
-    "url": "https://ci.huangyuhui.net/job/HMCL/2/artifact/HMCL/build/libs/HMCL-3.5.2.218.exe#/HMCL.exe",
+    "url": "https://maven.aliyun.com/repository/central/org/glavo/hmcl/hmcl-dev/3.5.2.218/hmcl-dev-3.5.2.218.exe#/HMCL.exe",
     "hash": "sha1:f2d2b757a9b86f3839ee6993f44e54a2ea340040",
     "pre_install": [
         "function ensureFile([String] $name) {",
@@ -35,7 +35,7 @@
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/HMCL.exe",
+        "url": "https://maven.aliyun.com/repository/central/org/glavo/hmcl/hmcl-dev/$version/hmcl-dev-$version.exe#/HMCL.exe",
         "hash": {
             "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
             "jsonpath": "$.exesha1"
