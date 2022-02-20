@@ -1,5 +1,4 @@
 {
-    "##": "Rename from zip to 7z is needed due to 'unsupported compression method' error.",
     "version": "5.2.2.5",
     "description": "Farm Steam cards from multiple accounts simultaneously.",
     "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
@@ -7,8 +6,16 @@
     "suggest": {
         ".NET Runtime/SDK": "main/dotnet"
     },
-    "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.2.5/ASF-generic.zip#/dl.7z",
+    "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.2.5/ASF-generic.zip#/dl",
     "hash": "5a08b12e49646be6be5c7ec24a5a71b4cc3d1eccc1d95ed766f774211629176b",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\" \"$dir\\_temp\" -ExtractDir plugins",
+        "Move-Item \"$dir\\_temp\\*\" \"$persist_dir\\plugins\" -Force",
+        "Remove-Item \"$dir\\_temp\" -Recurse -Force"
+    ],
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\$fname\" \"$dir\" -Removal"
+    },
     "bin": "ArchiSteamFarm.cmd",
     "persist": [
         "config",
@@ -24,6 +31,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/$version/ASF-generic.zip#/dl.7z"
+        "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/$version/ASF-generic.zip#/dl"
     }
 }
