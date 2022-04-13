@@ -1,13 +1,13 @@
 {
-    "version": "20210521",
+    "version": "20210210",
     "homepage": "https://github.com/nihui/waifu2x-ncnn-vulkan",
     "description": "AI-powered image upscaler on Vulkan.",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20210521/waifu2x-ncnn-vulkan-20210521-windows.zip",
-            "hash": "9569800cbe9575f5c1c5e13c491fc645ff0d447ead5a853b5f2efb2005b7417b",
-            "extract_dir": "waifu2x-ncnn-vulkan-20200414"
+            "url": "https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20210210/waifu2x-ncnn-vulkan-20210210-windows.zip",
+            "hash": "d53d0325303c8cc683a8da4f853d894c50bc942af50681c432b8af2370450812",
+            "extract_dir": "waifu2x-ncnn-vulkan-20210210"
         }
     },
     "bin": "waifu2x-ncnn-vulkan.exe",
