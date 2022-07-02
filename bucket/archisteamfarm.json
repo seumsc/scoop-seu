@@ -1,12 +1,12 @@
 {
-    "version": "5.2.7.6",
+    "version": "5.2.7.7",
     "description": "Farm Steam cards from multiple accounts simultaneously.",
     "homepage": "https://github.com/JustArchiNET/ArchiSteamFarm",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.7.6/ASF-win-x64.zip#/dl",
-            "hash": "14b14860e15753151c33535f54452d2a79a603b810bca3bb250b134d194c25aa",
+            "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/5.2.7.7/ASF-win-x64.zip#/dl",
+            "hash": "b69924f22f51aae810e48b1435398fe07150d191afacc60a82b860b42ca837b8",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\$fname\" \"$dir\\_temp\" -ExtractDir plugins",
                 "Move-Item \"$dir\\_temp\\*\" \"$persist_dir\\plugins\" -Force",
