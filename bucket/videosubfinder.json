@@ -1,12 +1,12 @@
 {
-    "version": "5.60",
+    "version": "5.70",
     "description": "Provides functionality for extract hardcoded text (hardsub) from video.",
     "homepage": "https://videosubfinder.sourceforge.io/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/videosubfinder/files/VideoSubFinder_5.60_x64.zip/download#/dl",
-            "hash": "7b503df4397acd5fe05f57e64d5ae84e3849f2f9f3575555df4b74077dd4db6e",
+            "url": "https://sourceforge.net/projects/videosubfinder/files/VideoSubFinder_5.70_x64.zip/download#/dl",
+            "hash": "45f3adba92a69c386c56be499f99f3517e26948936ff0d938001ee3c8914c785",
             "pre_install": [
                 "if (Test-Path \"$persist_dir\\settings\") {",
                 "  Expand-7zipArchive \"$dir\\$fname\" \"$dir\\_temp\" -ExtractDir Release_x64\\settings\\eng",
@@ -19,8 +19,8 @@
             }
         },
         "32bit": {
-            "url": "https://sourceforge.net/projects/videosubfinder/files/VideoSubFinder_5.60_x86.zip/download#/dl",
-            "hash": "649a61bcaffb8c71ac50b8b0e1436dea41f8a25d32251f10fc80f3eeb71f79f6",
+            "url": "https://sourceforge.net/projects/videosubfinder/files/VideoSubFinder_5.70_x86.zip/download#/dl",
+            "hash": "bac4de16175d4032a7a546444430070d3220512a46089d3338ad90431cffc22d",
             "pre_install": [
                 "if (Test-Path \"$persist_dir\\settings\") {",
                 "  Expand-7zipArchive \"$dir\\$fname\" \"$dir\\_temp\" -ExtractDir Release\\settings\\eng",
