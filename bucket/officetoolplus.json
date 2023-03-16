@@ -1,13 +1,13 @@
 {
-    "version": "10.0.6.1",
+    "version": "10.0.6.2",
     "description": "Manage your Microsoft Office install.",
     "homepage": "https://otp.landian.vip/",
     "license": "Proprietary",
     "suggest": {
         ".NET Runtime/SDK": "main/dotnet"
     },
-    "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.0.6.1/Office_Tool_v10.0.6.1.zip",
-    "hash": "d6713e0be3d2b433e64b9d36459aeddbf935619f39e1984cddf55c1666b40f6b",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.0.6.2/Office_Tool_v10.0.6.2.zip",
+    "hash": "522cb902284136dfc0775fae7b72f4302c4c774a4b92101ff58bcd574efb61df",
     "extract_dir": "Office Tool",
     "shortcuts": [
         [
