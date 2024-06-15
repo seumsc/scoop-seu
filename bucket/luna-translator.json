@@ -6,8 +6,12 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v3.6.3/LunaTranslator.zip",
-            "extract_dir": "LunaTranslator",
-            "hash": "6063d1235e90b29aff35fa6ed0d4c535efe9552e35eedbd16ca264e87a1bd658"
+            "hash": "6063d1235e90b29aff35fa6ed0d4c535efe9552e35eedbd16ca264e87a1bd658",
+            "pre_install": [
+                "Move-Item \"$dir\\LunaTranslator\" \"$dir\\.tmp\"",
+                "Move-Item \"$dir\\.tmp\\*\" \"$dir\"",
+                "Remove-Item \"$dir\\.tmp\""
+            ]
         },
         "32bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v3.6.3/LunaTranslator_x86.zip",
