@@ -18,5 +18,4 @@ jobs:
       uses: ScoopInstaller/GithubActions@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        USER_EMAIL: davidxuang@live.com
         SKIP_UPDATED: '1'
