@@ -14,7 +14,7 @@
     ],
     "persist": "AutoWikiBrowser.exe.config",
     "checkver": {
-        "url": "https://www.wikidata.org/w/rest.php/wikibase/v0/entities/items/Q4063270/statements?property=P348",
+        "url": "https://www.wikidata.org/w/rest.php/wikibase/v1/entities/items/Q4063270/statements?property=P348",
         "jsonpath": "$.P348[?(@.rank=='preferred')].value.content"
     },
     "autoupdate": {
