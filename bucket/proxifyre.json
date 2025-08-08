@@ -1,20 +1,20 @@
 {
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "A SOCKS5 proxifier for Windows.",
     "homepage": "https://github.com/wiresock/proxifyre",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.5/ProxiFyre-v2.0.5-x86-signed.zip",
-            "hash": "22e1557c96a9a5a0508c7e77ab2bb581759237b7f4cb59b71faed81c90b79225"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.6/ProxiFyre-v2.0.6-x86-signed.zip",
+            "hash": "bbcbe9934d5a359a486652a15346cc25333be7685304b800543c253beda4901c"
         },
         "64bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.5/ProxiFyre-v2.0.5-x64-signed.zip",
-            "hash": "c93c855d644c143960cfd35328ad44525f68c25b48233308a2d28d9c763e5e75"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.6/ProxiFyre-v2.0.6-x64-signed.zip",
+            "hash": "df01fb78785ff305c25bf4819e90dbcc09269439536a8b08655dd77ea7bce291"
         },
         "arm64": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.5/ProxiFyre-v2.0.5-ARM64-signed.zip",
-            "hash": "f544b42c8a88d5405b2dbb428e0cfe755c328c9677148bc1fcec596758a30354"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.6/ProxiFyre-v2.0.6-ARM64-signed.zip",
+            "hash": "16199743806c750abd2fdae5e97e97b976ec86c724d745dd3f3d4e488a15b7d9"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\$app-config.json\")) { New-Item \"$dir\\app-config.json\" | Out-Null }",
