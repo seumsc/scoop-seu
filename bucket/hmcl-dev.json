@@ -4,10 +4,7 @@
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
     "suggest": {
-        "JRE with JFX": [
-            "java/zulufx8-jre",
-            "java/zulufx17-jre"
-        ]
+        "JRE with JFX": "java/zulufx21-jre"
     },
     "url": "https://github.com/HMCL-dev/HMCL/releases/download/v3.7.0.300/HMCL-3.7.0.300.exe#/HMCL.exe",
     "hash": "8d1cab081fbdd5dbfe98e2989dec381ac4c06c9ab1c47df3d6b4d15105bf4117",
